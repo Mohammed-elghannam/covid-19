@@ -94,25 +94,6 @@ order by 2,3
 select continent,location, date, population, new_vaccinations,RollingPeopleVaccinated, (RollingPeopleVaccinated/population)*100
 from cte;
 
--- Using CTE to perform Calculation on Partition By in previous query
-
--- With PopvsVac (Continent, Location, Date, Population, New_Vaccinations, RollingPeopleVaccinated)
--- as
--- (
--- Select cd.continent, cd.location, cd.date, cd.population, vac.new_vaccinations
--- , SUM(cast(vac.new_vaccinations as  signed)) OVER (Partition by cd.Location Order by cd.location, cd.Date) as RollingPeopleVaccinated
--- , (RollingPeopleVaccinated/population)*100
--- From covid_death cd 
--- Join covidvaccinations vac 
--- 	On cd.location = vac.location
--- 	and cd.date = vac.date
--- where cd.continent is not null 
--- order by 2,3
--- )
--- Select *, (RollingPeopleVaccinated/Population)*100
--- From PopvsVac;
-
-
 
 -- Using Temp Table to perform Calculation on Partition By in previous query
 
