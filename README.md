@@ -15,3 +15,6 @@ in this project we will answer the next questions:
 * what is Countries with Highest Death Count per Population ?
 * Showing contintents with the highest death count per population?
 * Shows Percentage of Population that has recieved at least one Covid Vaccine ?
+
+## visualization
+ her is the final result of my dashboard for [covid 19](https://public.tableau.com/views/covid19_17065737637150/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
